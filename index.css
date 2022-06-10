@@ -1,3 +1,11 @@
+/* 
+font-family: 'Josefin Sans', sans-serif;
+font-family: 'Lato', sans-serif;
+font-family: 'Raleway', sans-serif;
+*/
+
+
+
 *{
     box-sizing: border-box;
     border: 0rem;
@@ -5,11 +13,12 @@
     padding: 0rem;
 }
 body{
+    padding: 1rem;
     font-size: 1.4rem;
     background-color: rgb(0, 5, 2);
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
+    font-family: 'Raleway', sans-serif;
 
+}
 
 .main_container{
     width: 100%;
@@ -22,59 +31,57 @@ body{
     background-color: rgb(250, 248, 248, 0.2);
     margin-top: 0.5rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     position: relative;
-    justify-content: center;
-    /* border: 2px solid rgb(231, 31, 31); */
+    justify-content: space-between;
 }
 
-.logo_section{
-    width: 16rem;
-    height: 3.5rem;
-    position: absolute;
-    left: 1rem;
-    border: 2px solid rgb(209, 47, 109);
-    border-radius: 5rem;
-}
-
-
-.logo_section_image{
-    height: 2.5rem;
-    width: 14.5rem;
+.logo_image{
+    height: 3.1rem;
     position: absolute;
     padding: 0.2rem;
     top: 0.5rem;
-    left: 6px;
-
+    left: 2rem;
 }
-.nav_content_lists{
+
+.search_input{
+
+    width: 21rem;
+    height: 2rem;
+    border-radius: 2rem;
+    padding-left: 0.5rem;
+    outline: none;
+    font-size: 1rem;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+    background: none;
+    border: 2px solid rgb(226, 23, 125);
+}
+
+.navigation_links{
     display: flex;
-    align-items: center;
-    justify-content: flex-end;
+    justify-content: space-around;
     list-style: none;
     font-size: 1.2rem;
-    /* border: 2px solid red; */
     position: absolute;
     top: 1rem;
     right: 2rem;
 }
-
-.nav_content_list{
+.navigation_link{
     text-decoration: none;
     margin-left: 2rem;
-    color: white;
-    font-family:  "Montserrat";
+    color: rgb(245, 77, 133) ;
+    font-family: 'Lato', sans-serif;
 }
 
 
-.nav_content_list:hover{
+.navigation_link:hover{
     border-bottom: 2px solid rgb(245, 77, 133);
-    transition: 0.5s;
-
+    color: white ;
 }
 
-.section_one{
-    margin-top: 0.5rem;
+.welcome_page{
     height: 90vh;
     width: 100%;
     background-image: linear-gradient(
@@ -82,7 +89,6 @@ body{
         rgba(17, 15, 16, 0.5), 
         rgba(80, 71, 75, 0.5)),
     url(images/bg1.1.jpg);
-    /* background-image: url(images/bg1.1.jpg); */
     background-position: center;
     background-size: cover;
     display: flex;
@@ -92,42 +98,78 @@ body{
 
 .welcome{
     height: 20rem;
-    width: 40rem;
+    width: 45rem;
     margin-left: 3rem;
     color:rgb(250, 248, 248);
 }
 .welcome_text{
-    font-family: 'Courier New', Courier, monospace;
     font-size: 3rem;
     color: rgb(255, 0, 85);
     color:rgb(250, 248, 248);
+    font-family: 'Raleway', sans-serif;
 }
 
-.welcome span{
+.welcome_text_sub{
     display: block;
-    font-size: 4rem;
-    font-family:'Franklin Gothic Medium',
-     'Arial Narrow', Arial, sans-serif ;
+    font-size: 5rem;
 }
 
-.welcome_subtext{
+.welcome_mssg{
     font-size: 1rem;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
 }
 
+.button{
+    text-decoration: none;
+    font-size: 1.5rem;
+    color: #e2177d;
+    border: 3px solid rgb(226, 23, 125);
+    position: relative;
+    padding: 12px 20px;
+    font-family: 'Raleway', sans-serif;
+    top: 5rem;
+    left: 1rem;
+    
+}
+
+.button::before,
+.button::after{
+    content: "";
+    position: absolute;
+    width: 3rem;
+    height: 3rem;
+    border: inherit;
+    transition: all .5s;
+}
+.button::before{
+    top: -15px;
+    left: -15px;
+    border-width:3px 0 0 3px;
+}
+
+.button::after{
+    bottom: -15px;
+    right: -15px;
+    border-width: 0 3px 3px 0;
+}
+
+.button:hover::before,
+.button:hover::after{
+    width: calc(100% + 27px);
+    height: calc(100% + 27px);
+}
 .our_mission{
     height: 26rem;
     width: 100%;
-    background-color: rgb(253, 251, 251);
     display:flex;
-    flex-direction: column;
-    /* border: 2px solid red; */
+ 
 
 }
 .our_mission_content{
     display: flex;
     background-color: rgb(20, 3, 51, 0.7);
     align-items: center;
-    /* border: 2px solid red; */
 }
 .our_mission_content_image{
     height: 20rem;
@@ -140,14 +182,11 @@ body{
     color: white;
 }
 
-.our_mission_title{
-    color: rgb(7, 6, 6);
-    text-align: center;
+.our_mission_text h4{
+    font-family: 'Josefin Sans', sans-serif;
 }
 
-
-
-.our_team{
-    width: 100%;
-    height: 30rem;
+.our_mission_title{
+    color: rgb(253, 253, 253);
+    text-align: center;
 }
